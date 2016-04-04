@@ -1,0 +1,87 @@
+
+plugin.tx_agproject_project {
+	view {
+		templateRootPaths.0 = {$plugin.tx_agproject_project.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_agproject_project.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_agproject_project.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_agproject_project.persistence.storagePid}
+	}
+}
+
+plugin.tx_agproject._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-ag-project table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-ag-project table th {
+		font-weight:bold;
+	}
+
+	.tx-ag-project table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+plugin.tx_agproject_project.settings{
+	listW 	= {$plugin.tx_agproject_project.settings.listW}
+	listH 	= {$plugin.tx_agproject_project.settings.listH}
+	detailH = {$plugin.tx_agproject_project.settings.detailH}
+	detailW = {$plugin.tx_agproject_project.settings.detailW}
+	listCropTitleText = {$plugin.tx_agproject_project.settings.listCropTitleText}
+	listCropText 	= {$plugin.tx_agproject_project.settings.listCropText}
+	recordPerPageDefault = {$plugin.tx_agproject_project.settings.recordPerPageDefault}
+	insertAboveDefault = {$plugin.tx_agproject_project.settings.insertAboveDefault}
+	insertBelowDefault = {$plugin.tx_agproject_project.settings.insertBelowDefault}
+	maxVisiblePagesDefault = {$plugin.tx_agproject_project.settings.maxVisiblePagesDefault}
+
+	priceText = {$plugin.tx_agproject_project.settings.priceText}
+	
+}
+
+
+
+
+page.includeJSFooter {
+    project-jquery = EXT:ag_project/Resources/Public/Js/ag-project.js    
+    project-owl-jquery = EXT:ag_project/Resources/Public/Js/owl.carousel.js   
+}
+
+
+[globalVar = GP:projectID > 0]
+	config.noPageTitle = 2
+[global]
+ 
+page.headerData.1012 = TEXT
+page.headerData.1012.value(
+	<link rel="stylesheet" type="text/css" href="typo3conf/ext/ag_project/Resources/Public/Css/ag_project.css" media="all">
+	<link rel="stylesheet" type="text/css" href="typo3conf/ext/ag_project/Resources/Public/Css/owl.carousel.css" media="all">
+)
+
+
+
+config.tx_ag_project.features.skipDefaultArguments = 1
+plugin.tx_ag_project.features.skipDefaultArguments = 1

@@ -1,0 +1,28 @@
+
+
+<f:comment>
+####################################################	
+###  Category List Template
+####################################################
+</f:comment>
+
+<div class="col-md-3 product-list-image">
+	<f:if condition="{product.media.images}">
+		<f:for each="{product.media.images}" as="img" >
+			<f:image src="{img.identifier}" height="{settings.listH}c" width="{settings.listW}c" alt="{product.name}" title="{product.name}" style="height:100px; width:100px;"/>
+		</f:for>
+	</f:if>
+</div>
+<div class="product-list-bodytext">
+    <h4 class="list-group-item-heading"><f:format.stripTags><f:format.crop maxCharacters="{settings.listCropTitleText}">{product.title}</f:format.crop></f:format.stripTags></h4>
+    <div class="list-group-item-text"><f:format.stripTags><f:format.crop maxCharacters="{settings.listCropText}">{product.description}</f:format.crop></f:format.stripTags></div>
+    
+	<div class="list-group-item-price">
+		<strong>{product.price}&nbsp;<f:if condition="{product.price}"><f:format.raw>{settings.priceText}</f:format.raw> </f:if>	</strong>
+	</div>
+   	
+   	<div class="list-group-item-more">
+		<f:link.page pageUid="{settings.detailPage}"  additionalParams="{pID:'{product.uid}'}"  noCacheHash="1"> <f:translate key="tx_agproduct_domain_model_product.more" />  </f:link.page>
+	</div>
+
+</div>

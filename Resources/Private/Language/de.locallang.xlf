@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="en" datatype="plaintext" original="messages" date="2016-02-26T10:23:45Z" product-name="ag_project">
+		<header/>
+		<body>
+
+			<trans-unit id="plugin-title">
+				<target>Projects</target>
+			</trans-unit>
+
+			<trans-unit id="plugin-description">
+				<target>Projects Management</target>
+			</trans-unit>
+
+
+			<trans-unit id="tx_agproject_domain_model_category">
+				<target>Category</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.images">
+				<target>Images</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project">
+				<target>Project</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.images">
+				<target>Images</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.client">
+				<target>Client</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.website_url">
+				<target>Website Url</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.category">
+				<target>Category</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.status">
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.realted_projects">
+				<target>Realted Projects</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status">
+				<target>Status</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status.name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status.image_status">
+				<target>Image Status</target>
+			</trans-unit>
+			<trans-unit id="tx_agproduct_domain_model_category">
+				<target>Category</target>
+			</trans-unit>
+			<trans-unit id="tx_agproduct_domain_model_category.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_agproduct_domain_model_category.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_agproduct_domain_model_category.images">
+				<target>Images</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project">
+				<target>Product</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.title">
+				<target>Title</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.description">
+				<target>Description</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.images">
+				<target>Images</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.price">
+				<target>Price</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.category">
+				<target>Category</target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.more">
+				<target>More </target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.back">
+				<target>Back </target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.suche">
+				<target>Suche: </target>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.submit">
+				<target>Submit </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.visit.website">
+				<target>visit the site </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_status">
+				<target>Project Status </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_categories">
+				<target>Categories </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_client">
+				<target>Client </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_details">
+				<target>PROJECT DETAILS </target>
+			</trans-unit>
+			
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_description">
+				<target>PROJECT DESCRIPTION </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_relatedproject">
+				<target>RELATED PROJECTS  </target>
+			</trans-unit>	
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_prev">
+				<target> Previous </target>
+			</trans-unit>
+
+			<trans-unit id="tx_agproject_domain_model_project.lbl_project_next">
+				<target>Next </target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
