@@ -24,10 +24,10 @@ plugin.tx_agproject_project.settings {
 		listH = 150
 
 		# cat=plugin.tx_agproject_project//a; type=string; label= Detail image Width
-		detailW = 600
+		detailW = 1200
 
 		# cat=plugin.tx_agproject_project//a; type=string; label= Detail image Height
-		detailH = 600
+		detailH = 610
 
 		# cat=plugin.tx_agproject_project//a; type=string; label= Crop Title Text
 		listCropTitleText = 20
