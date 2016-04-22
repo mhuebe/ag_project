@@ -67,6 +67,10 @@ h1 { font-size: 30px !important; font-weight: 800 !important }
 */
 .cat-description ul{float:left; display:-webkit-inline-box;}
 .cat-description ul li{margin:0px 10px;}
+.tx-ag-project .related-description {
+    float: left;
+}
+
 @media only screen and (max-width:1400px) {
 	.tx-ag-project .monitor-bg { max-width: 560px; min-height: 435px; }
 	.tx-ag-project .carousel { padding: 18px; }

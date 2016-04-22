@@ -56,14 +56,13 @@ plugin.tx_agproject_project.settings{
 	recordPerPageDefault = {$plugin.tx_agproject_project.settings.recordPerPageDefault}
 	insertAboveDefault = {$plugin.tx_agproject_project.settings.insertAboveDefault}
 	insertBelowDefault = {$plugin.tx_agproject_project.settings.insertBelowDefault}
-	maxVisiblePagesDefault = {$plugin.tx_agproject_project.settings.maxVisiblePagesDefault}
-
-	priceText = {$plugin.tx_agproject_project.settings.priceText}
-	
+	maxVisiblePagesDefault = {$plugin.tx_agproject_project.settings.maxVisiblePagesDefault}	
 }
 
-
-
+page.includeCSS {
+    ag_project = EXT:ag_project/Resources/Public/Css/ag_project.css   
+    owl_carousel = EXT:ag_project/Resources/Public/Css/owl.carousel.css
+}
 
 page.includeJSFooter {
     project-jquery = EXT:ag_project/Resources/Public/Js/ag-project.js    
@@ -74,14 +73,6 @@ page.includeJSFooter {
 [globalVar = GP:projectID > 0]
 	config.noPageTitle = 2
 [global]
- 
-page.headerData.1012 = TEXT
-page.headerData.1012.value(
-	<link rel="stylesheet" type="text/css" href="typo3conf/ext/ag_project/Resources/Public/Css/ag_project.css" media="all">
-	<link rel="stylesheet" type="text/css" href="typo3conf/ext/ag_project/Resources/Public/Css/owl.carousel.css" media="all">
-)
-
-
 
 config.tx_ag_project.features.skipDefaultArguments = 1
 plugin.tx_ag_project.features.skipDefaultArguments = 1
