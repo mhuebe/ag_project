@@ -1,0 +1,72 @@
+
+
+<f:comment>
+####################################################	
+###  List Template
+####################################################
+</f:comment>
+
+
+<f:if condition="{settings.isPagination} == 1">	
+	<f:then>
+		<f:comment>
+ 			### Pagination ###
+	 	</f:comment>		
+	 	<div class="masonry-thumbnail post-item product-listing">
+			<f:link.page class="post-thumb" pageUid="{settings.detailPage}"  additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1">			
+			<f:if condition="{product.media.images}">
+				<f:for each="{product.media.images}" as="img" iteration="imageIteration">
+					<f:if condition="{imageIteration.index} == 0">
+						<f:image src="{img.identifier}"  width="{settings.listW}c" height="{settings.listH}c" alt="{product.name}" title="{product.name}" />
+					</f:if>
+				</f:for>
+			</f:if>
+		</f:link.page>
+		<div class="post-content">
+
+			<f:if condition="{product.website_url}">
+				<f:then>
+					<f:link.external uri="{product.website_url}" target="_blank"><i class="fa fa-link"></i></f:link.external>
+				</f:then>
+				<f:else>
+					<f:link.page pageUid="{settings.detailPage}" target="_blank" additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1"><i class="fa fa-link"></i></f:link.page>
+				</f:else>				
+			</f:if>
+
+			<h2><f:link.page pageUid="{settings.detailPage}" title="{product.title}" additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1"><f:format.stripTags><f:format.crop maxCharacters="{settings.listCropTitleText}">{product.title}</f:format.crop></f:format.stripTags></f:link.page></h2>
+		</div>
+		</div>
+	</f:then>
+	<f:else>
+		<f:comment>
+ 			### Isotop ###
+	 	</f:comment>		
+		
+	 	<div class="masonry-thumbnail post-item">
+			<f:link.page class="post-thumb" pageUid="{settings.detailPage}"  additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1">			
+				<f:if condition="{product.media.images}">
+					<f:for each="{product.media.images}" as="img" iteration="imageIteration">
+						<f:if condition="{imageIteration.index} == 0">
+						<f:image src="{img.identifier}"  width="{settings.listW}c" height="{settings.listH}c" alt="{product.name}" title="{product.name}" />
+					</f:if>
+					</f:for>
+				</f:if>
+			</f:link.page>
+		<div class="post-content">
+
+			<f:if condition="{product.website_url}">
+				<f:then>
+					<f:link.external uri="{product.website_url}" target="_blank"><i class="fa fa-link"></i></f:link.external>
+				</f:then>
+				<f:else>
+					<f:link.page pageUid="{settings.detailPage}" target="_blank" additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1"><i class="fa fa-link"></i></f:link.page>
+				</f:else>				
+			</f:if>
+			
+			<h2><f:link.page pageUid="{settings.detailPage}" title="{product.title}" additionalParams="{projectID:'{product.uid}'}"  noCacheHash="1"><f:format.stripTags><f:format.crop maxCharacters="{settings.listCropTitleText}">{product.title}</f:format.crop></f:format.stripTags></f:link.page></h2>
+		</div>
+		</div>
+	</f:else>
+
+</f:if>
+

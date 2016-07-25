@@ -1,0 +1,146 @@
+{namespace agP=AG\AgProject\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<f:layout name="Default" />
+<f:section name="main">
+<f:flashMessages />
+
+
+<f:comment>
+####################################################	
+###  Set values for Pagination start
+####################################################
+</f:comment>
+<f:if condition="{settings.recordPerPage}">
+	<f:then><v:variable.set name="recordPerPage" value="{settings.recordPerPage}"></v:variable.set></f:then>
+	<f:else><v:variable.set name="recordPerPage" value="{settings.recordPerPageDefault}"></v:variable.set></f:else>
+</f:if>
+
+<f:if condition="{settings.insertAbove} == 0">
+	<f:then><v:variable.set name="insertAbove" value="{settings.insertAbove}"></v:variable.set></f:then>
+	<f:else><v:variable.set name="insertAbove" value="{settings.insertAboveDefault}"></v:variable.set></f:else>
+</f:if>
+
+<f:if condition="{settings.insertBelow} == 0">
+	<f:then><v:variable.set name="insertBelow" value="{settings.insertBelow}"></v:variable.set></f:then>
+	<f:else><v:variable.set name="insertBelow" value="{settings.insertBelowDefault}"></v:variable.set></f:else>
+</f:if>
+
+<f:if condition="{settings.maxVisiblePages}">
+	<f:then><v:variable.set name="maxVisiblePages" value="{settings.maxVisiblePages}"></v:variable.set></f:then>
+	<f:else><v:variable.set name="maxVisiblePages" value="{settings.maxVisiblePagesDefault}"></v:variable.set></f:else>
+</f:if>
+
+<f:comment>
+####################################################	
+###  Set values for Pagination End
+####################################################
+</f:comment>
+
+<!-- Suche Template Start-->
+<f:comment>
+
+
+
+####################################################	
+###  Suche Template
+####################################################
+</f:comment>
+<f:if condition="{settings.modeOptions} == 'Project->suche' ">
+	<f:render partial="Template/Search" arguments="{product:product, settings:settings, actionUrl:actionUrl, gp:gp }" />
+</f:if>
+<!-- Suche Template End-->
+
+
+<!-- Product List Template Start-->
+<f:comment>
+####################################################	
+###  List/detail Template
+####################################################
+</f:comment>
+<f:if condition="{products-list}">
+	<f:if condition="{settings.modeOptions} == 'Project->detail' ">
+		<f:then>
+				<div class="product-detail-group">		
+						<f:for each="{products-list}" as="product" iteration="itemIteration">
+							<div class="product-listing detail-group-item">
+								<f:render partial="Template/Detail" arguments="{product:product, settings:settings, category:categoryListGrid,related:related_project}" />
+							</div>
+						</f:for>			
+				</div>
+		</f:then>
+		<f:else>
+				<div class="list-group col-md-12" >	
+					
+						<f:if condition="{settings.isPagination} == 1">
+							<f:then>
+								<agP:Paginate objects="{products-list}" as="paginatedObjekt" configuration="{itemsPerPage: '{recordPerPage}', insertAbove: '{insertAbove}', insertBelow: '{insertBelow}', maximumVisiblePages: '{maxVisiblePages}'}"> 
+									<f:for each="{paginatedObjekt}" as="product" iteration="itemIteration">
+										<div class="product-listing list-group-item {settings.numberGrids}">
+											<f:render partial="Template/List" arguments="{product:product, settings:settings}" />
+										</div>
+									</f:for>
+								</agP:Paginate>		
+							</f:then>
+							<f:else>
+								<div class="portfolio-grid ag-isotop" id="galleryTab">
+
+								
+								  <button data-tg="all" data-toggle="portfilter" class="btn btn-primary btn-porto">All</button>		
+								  <f:for each="{categoryListGrid}" as="category" iteration="iterationItem">
+								  	<button data-tg="cat_{category.uid}" id="cat_{category.uid}"  data-toggle="portfilter" class="btn btn-default btn-porto">{category.title}</button>	
+								  </f:for>
+
+								</div>
+
+								<f:for each="{products-list}" as="product" iteration="itemIteration">
+									<div class="product-listing list-group-item {settings.numberGrids} {f:if(condition: itemIteration.isOdd , then: 'odd')}"  data-show="{product.CategoryTitle.cat_title}">
+										<f:render partial="Template/List" arguments="{product:product, settings:settings, itemIteration:itemIteration}" />
+									</div>
+								</f:for>
+
+							</f:else>	
+						</f:if>				
+				</div>
+		</f:else>
+	</f:if>		
+</f:if>
+<!-- Product List Template End--> 
+
+
+
+
+<!-- Category List Template Start-->
+<f:comment>
+####################################################	
+###  Category List Template
+####################################################
+</f:comment>
+<f:if condition="{category-list}">
+	<div class="list-group col-md-12">
+		
+			<f:if condition="{settings.isPagination} == 1">
+				<f:then>
+					<ag:Paginate objects="{category-list}" as="paginatedObjekt" configuration="{itemsPerPage: '{recordPerPage}', insertAbove: '{insertAbove}', insertBelow: '{insertBelow}', maximumVisiblePages: '{maxVisiblePages}'}"> 
+						<f:for each="{paginatedObjekt}" as="product" iteration="itemIteration">
+							<div class="product-listing list-group-item {settings.numberGrids} {f:if(condition: itemIteration.isOdd , then: 'odd')}">
+								<f:render partial="Template/catList" arguments="{product:product, settings:settings}" />
+							</div>
+						</f:for>
+					</ag:Paginate>		
+				</f:then>
+				<f:else>
+					<f:for each="{category-list}" as="product" iteration="itemIteration">
+						<div class="product-listing list-group-item {settings.numberGrids} {f:if(condition: itemIteration.isOdd , then: 'odd')}">
+							<f:render partial="Template/catList" arguments="{product:product, settings:settings}" />
+						</div>
+					</f:for>
+				</f:else>	
+			</f:if>	
+				
+	</div>
+</f:if>
+<!-- Category List Template End--> 
+
+</f:section>
+
+

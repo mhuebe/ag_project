@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-14T16:15:06Z" product-name="competition">
+		<header/>
+		<body>
+						
+			<trans-unit id="flexforms_general.generalSetting">
+				<source>General Settings</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.list.setting">
+				<source>List Settings</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.modeOptions">
+				<source>Mode Options</source>
+			</trans-unit>			
+
+			<trans-unit id="flexforms_general.modeOptions0">
+				<source>Kategorie [Liste]</source>
+			</trans-unit>	
+
+			<trans-unit id="flexforms_general.modeOptions1">
+				<source>Produkt [Liste]</source>
+			</trans-unit>	
+
+			<trans-unit id="flexforms_general.modeOptions2">
+				<source>Produkt [Detail]</source>
+			</trans-unit>	
+
+			<trans-unit id="flexforms_general.modeOptions3">
+				<source>Produkt [Suche]</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.storagePID">
+				<source>Starting Point</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.listPage">
+				<source>List Siete</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.detailPage">
+				<source>Detail Siete</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.layoutView">
+				<source>Layout View</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.listingView">
+				<source>Listing View</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.gridView">
+				<source>Grid View</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.Column">
+				<source>Column </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.Column-1">
+				<source>Column-1 </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.Column-2">
+				<source>Column-2 </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.Column-3">
+				<source>Column-3 </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.Column-4">
+				<source>Column-4 </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.sliderElements">
+				<source>Slider Items</source>
+			</trans-unit>	
+
+			<trans-unit id="flexforms_general.sliderElements.Column-1">
+				<source>1</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.sliderElements.Column-2">
+				<source>2</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.sliderElements.Column-3">
+				<source>3</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.sliderElements.Column-4">
+				<source>4</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexforms_general.orderBy">
+				<source>Order By</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.desc">
+				<source>Order By Uid DESC [ Latest Products ]</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.asc">
+				<source>Order By Uid ASC </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.sorting">
+				<source>Order By BE Sorting </source>
+			</trans-unit>
+			
+
+			<trans-unit id="flexforms_general.numberGrids">
+				<source>Number of Grid</source>
+			</trans-unit>			
+
+			<trans-unit id="flexforms_general.pagination.setting">
+				<source>Pagination</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.limit">
+				<source>Max records displayed</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.paginate">
+				<source>Show the pagination</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.recordPerPage">
+				<source>Show 'n' record per page</source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.insertAbove">
+				<source>Pagination to show : Top </source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.insertBelow">
+				<source>Pagination to show : Bottom </source>
+			</trans-unit>
+
+			<trans-unit id="flexforms_general.maxVisiblePages">
+				<source>Maximum Visible Pages </source>
+			</trans-unit>			
+
+			<trans-unit id="flexforms_general.pagStyle.0">
+				<source>isotop (Filteration) </source>
+			</trans-unit>			
+
+			<trans-unit id="flexforms_general.pagStyle.1">
+				<source>Pagination </source>
+			</trans-unit>	
+			
+		</body>
+	</file>
+</xliff>

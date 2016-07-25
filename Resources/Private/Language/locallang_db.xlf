@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-26T10:23:45Z" product-name="ag_project">
+		<header/>
+		<body>
+			<trans-unit id="tx_agproject_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_category.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project">
+				<source>project</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.client">
+				<source>Client</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.website_url">
+				<source>Website Url</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.realted_projects">
+				<source>Realted Projects</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_status.image_status">
+				<source>Image Status</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.price">
+				<source>Price</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

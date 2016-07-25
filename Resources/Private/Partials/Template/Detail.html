@@ -1,0 +1,185 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:page.header.title title="{product.title}" setIndexedDocTitle="1">{product.title}</v:page.header.title>
+
+<f:comment>
+####################################################	
+###  Detail Template
+####################################################
+</f:comment>
+
+
+<f:if condition="{product.prevData.0.uid}">
+	<f:link.page  pageUid="{settings.detailPage}" class="btn btn-primary" additionalParams="{projectID:'{product.prevData.0.uid}'}"  noCacheHash="1"><span class="glyphicon glyphicon-chevron-left"></span><f:translate key="tx_agproject_domain_model_project.lbl_project_prev" /></f:link.page>	
+</f:if>
+
+<f:if condition="{product.nextData.0.uid}">
+	<f:link.page  pageUid="{settings.detailPage}" class="btn btn-primary pull-right" additionalParams="{projectID:'{product.nextData.0.uid}'}"  noCacheHash="1"><f:translate key="tx_agproject_domain_model_project.lbl_project_next" /><span class="glyphicon glyphicon-chevron-right"></span></f:link.page>
+</f:if>	
+ 
+
+<article class="page-header clearfix text-center mar_top_0">
+ <div class="col-xs-12">
+    <h3>{product.title}</h3>
+    <p>{product.shorttext}</p>
+    <div class="small-line"></div>
+ </div>
+</article> 
+
+
+<div class="product-detail-image monitor-bg">
+
+	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+	 	<f:if condition="{product.media.images}">
+			<f:for each="{product.media.images}" as="img" iteration="itemIteration" >
+		     	 <li data-target="#myCarousel" data-slide-to="{itemIteration.index}" class="{f:if(condition: ' {itemIteration.index} == 0 ', then: 'active', else: '')}"></li>
+		      </f:for>
+		</f:if>
+	</ol>
+
+	<!-- Wrapper for slides -->
+		<div class="carousel-inner zoom-gallery" role="listbox">
+		  
+		<f:if condition="{product.media.images}">
+				<f:for each="{product.media.images}" as="img" iteration="itemIteration" >
+					<div class="item {f:if(condition: ' {itemIteration.index} == 0 ', then: 'active', else: '')}">
+						
+						<a href="{img.identifier}" class="popup">
+							<f:image src="{img.identifier}" class="img-responsive" height="{settings.detailH}c" width="{settings.detailW}c" alt="{product.name}" title="{product.name}" />
+						</a>
+					</div>	
+				</f:for>
+			</f:if>
+
+		</div>
+
+	<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		  <span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		  <span class="sr-only">Next</span>
+		</a>
+	</div>
+
+  
+	
+</div>
+
+
+<div class="project-container clearfix">
+	<div class="col-sm-8">
+		<article class="page-header clearfix small-left-line">	
+			<h4><f:translate key="tx_agproject_domain_model_project.lbl_project_description" /></h4>
+			<div class="small-line"></div>			
+		</article>
+		<div class="detail-main-content">
+				<f:format.html>{product.description}</f:format.html>
+		</div>
+	</div>
+	<div class="col-sm-4">
+		<article class="page-header clearfix small-left-line">
+		   <h4><f:translate key="tx_agproject_domain_model_project.lbl_project_details" /></h4>
+		   <div class="small-line"></div>
+		</article>
+		
+		<ul class="list-unstyled project-container-list project-right-description">
+
+			<f:if condition="{product.client}">
+				<li><strong><f:translate key="tx_agproject_domain_model_project.lbl_client" /></strong><div class="cat-description">{product.client}</div></li>
+			</f:if>
+ 
+			<f:if condition="{product.CategoryTitle.cat_uid}">
+				<li><strong><f:translate key="tx_agproject_domain_model_project.lbl_categories" /></strong>
+					<div class="cat-description">
+						<ul>
+							<v:iterator.explode as="explode_category" content="{product.CategoryTitle.cat_uid}" glue=",">
+
+								<f:for each="{explode_category}" as="cat" iteration="itemIteration">
+						 			<li>
+										<f:link.page class="post-thumb" pageUid="{settings.listPage}"  additionalParams="{categoryID:'{cat}'}"  class="explore-link" noCacheHash="1">								
+
+										<v:resource.record table="tx_agproject_domain_model_category" field="title" uid="{cat}" as="cat_name">{cat_name.0}</v:resource.record>							
+
+										</f:link.page>										 
+									</li>  	
+								</f:for>	
+							</v:iterator.explode>													
+						</ul>
+					</div>
+				</li> 
+			</f:if>
+
+			<f:if condition="{product.ProjectStauts.project_status}">
+				<li><strong><f:translate key="tx_agproject_domain_model_project.lbl_project_status" /></strong>
+					<div class="cat-description">
+						<ul>
+							<v:iterator.explode as="explode_status" content="{product.ProjectStauts.project_status}" glue=",">
+								<f:for each="{explode_status}" as="status" iteration="itemIteration">
+									<li>
+										<v:resource.record table="tx_agproject_domain_model_status" field="name" uid="{status}" as="status_name">{status_name.0}</v:resource.record>									 
+									</li>  	
+								</f:for>	
+							</v:iterator.explode>													
+						</ul>
+					</div>
+				</li> 
+			</f:if>
+
+			<f:if condition="{product.client}">
+				<li><strong><f:translate key="tx_agproject_domain_model_project.lbl_project_client" /></strong><div class="cat-description">{product.client}</div></li>
+			</f:if>
+			                            
+		</ul>
+
+		<f:if condition="{product.website_url}">
+			<f:link.external uri="{product.website_url}" target="_blank" class="btn btn-default"><f:translate key="tx_agproject_domain_model_project.visit.website" /> <span class="glyphicon glyphicon-link"></span> </f:link.external>
+		</f:if>
+
+	</div>
+
+	<div class="detail-group-item-back">
+		<f:link.page pageUid="{settings.listPage}" class="btn btn-default" noCacheHash="1"> 
+			<span class="glyphicon glyphicon-backward"></span> <f:translate key="tx_agproject_domain_model_project.back" /> 
+		</f:link.page>
+	</div>
+
+	<f:if condition="{related}">
+		
+		<div class="related-description">
+			<article class="page-header clearfix small-left-line">	
+				<h4><f:translate key="tx_agproject_domain_model_project.lbl_project_relatedproject" /></h4>
+				<div class="small-line"></div>			
+			</article>
+
+			<div id="ag-project-owl-demo" class="owl-carousel">
+				<f:for each="{related}" as="product_related" iteration="itemIteration1">
+		    		<div class="item">
+		    			<div class="product-listing list-group-item {f:if(condition: itemIteration.isOdd , then: 'odd')}"  data-show="{product.CategoryTitle.cat_title}">	
+				          <f:render partial="Template/List" arguments="{product:product_related, settings:settings, itemIteration:itemIteration1}" />
+				       	</div>
+		    		</div>					    
+			    </f:for>						
+			</div>				
+		
+		</div>
+		<v:asset.script name="ag-project-carousel" allowMoveToFooter="1">
+			$(function(){
+				$("#ag-project-owl-demo").owlCarousel({
+				    items : <f:format.raw>{settings.sliderElements}</f:format.raw>,
+				    itemsDesktop : [1199,3],
+         			itemsDesktopSmall : [979,2]
+				}); 
+			});	
+		</v:asset.script>
+
+	</f:if>
+
+
+
+</div>
+

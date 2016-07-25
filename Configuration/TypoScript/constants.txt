@@ -1,0 +1,55 @@
+
+plugin.tx_agproject_project {
+	view {
+		# cat=plugin.tx_agproject_project/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ag_project/Resources/Private/Templates/
+		# cat=plugin.tx_agproject_project/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ag_project/Resources/Private/Partials/
+		# cat=plugin.tx_agproject_project/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ag_project/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_agproject_project//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+plugin.tx_agproject_project.settings {
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= List image Width
+		listW = 150
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= List image Height
+		listH = 150
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Detail image Width
+		detailW = 1200
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Detail image Height
+		detailH = 610
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Crop Title Text
+		listCropTitleText = 20
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Crop Text
+		listCropText = 150
+
+		
+		# cat=plugin.tx_agproject_project//a; type=string; label= Records Per Page
+		recordPerPageDefault = 4
+
+		# cat=plugin.tx_agproject_project//a; type=check; label= Show To Pagination : Above
+		insertAboveDefault = 1
+
+		# cat=plugin.tx_agproject_project//a; type=check; label= Show To Pagination : Below
+		insertBelowDefault = 1
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Maximum Visible Pages in Pagination
+		maxVisiblePagesDefault = 5
+
+		# cat=plugin.tx_agproject_project//a; type=string; label= Price Text
+		priceText = &euro;
+		
+
+}

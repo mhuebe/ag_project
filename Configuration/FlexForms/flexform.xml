@@ -1,0 +1,327 @@
+ <T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+        <!--  <langChildren>1</langChildren>!-->
+    </meta>
+    <sheets>
+        <tab_1>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.generalSetting
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <!-- View -->
+                    <settings.modeOptions>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.modeOptions
+                            </label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <onChange>reload</onChange>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.modeOptions1
+                                        </numIndex>
+                                        <numIndex index="1">Project->list</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.modeOptions0
+                                        </numIndex>
+                                        <numIndex index="1">Category->list</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.modeOptions2
+                                        </numIndex>
+                                        <numIndex index="1">Project->detail</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.modeOptions3
+                                        </numIndex>
+                                        <numIndex index="1">Project->suche</numIndex>
+                                    </numIndex>
+                                </items>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>1</minitems>
+                                <multiple>1</multiple>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.modeOptions>
+                    <settings.listPage>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.listPage
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.listPage>
+
+                    <settings.detailPage>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.detailPage
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.detailPage>
+                    <settings.storageFolder>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.storagePID
+                            </label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.storageFolder>
+                </el>
+            </ROOT>
+        </tab_1>
+        <tab_2>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>
+                        LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.list.setting
+                    </sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.numberGrids>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.numberGrids
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.Column-1
+                                        </numIndex>
+                                        <numIndex index="1">col-md-12</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.Column-2
+                                        </numIndex>
+                                        <numIndex index="1">col-md-6</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.Column-3
+                                        </numIndex>
+                                        <numIndex index="1">col-md-4</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.Column-4
+                                        </numIndex>
+                                        <numIndex index="1">col-md-3</numIndex>
+                                    </numIndex>
+                                </items>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <multiple>1</multiple>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.numberGrids>
+
+                    <settings.sliderElements>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sliderElements
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sliderElements.Column-4
+                                        </numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sliderElements.Column-3
+                                        </numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sliderElements.Column-2
+                                        </numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+
+                                </items>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <multiple>1</multiple>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.sliderElements>
+
+
+                    <settings.orderBy>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.orderBy
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.desc
+                                        </numIndex>
+                                        <numIndex index="1">t1.uid DESC</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.asc
+                                        </numIndex>
+                                        <numIndex index="1">t1.uid ASC</numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.sorting
+                                        </numIndex>
+                                        <numIndex index="1">t1.sorting</numIndex>
+                                    </numIndex>
+
+                                </items>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <multiple>1</multiple>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.orderBy>
+
+
+                    <settings.isPagination>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.paginate
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.pagStyle.0
+                                        </numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">
+                                            LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.pagStyle.1
+                                        </numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                                <multiple>1</multiple>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.isPagination>
+
+                    <settings.recordPerPage>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.recordPerPage
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.recordPerPage>
+
+                    <settings.maxVisiblePages>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.maxVisiblePages
+                            </label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </settings.maxVisiblePages>
+
+                    <settings.insertAbove>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.insertAbove
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.insertAbove>
+
+                    <settings.insertBelow>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:ag_project/Resources/Private/Language/locallang_flexform.xlf:flexforms_general.insertBelow
+                            </label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.insertBelow>
+
+                </el>
+            </ROOT>
+        </tab_2>
+    </sheets>
+</T3DataStructure>
