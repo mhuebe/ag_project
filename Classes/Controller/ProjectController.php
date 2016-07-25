@@ -43,7 +43,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action list
      *
-     * @param AG\AgProject\Domain\Model\Project
+     * @param \AG\AgProject\Domain\Model\Project
      * @return void
      */
     public function listAction()
@@ -90,7 +90,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action show
      *
-     * @param \AG\AgProject\Domain\Model\Project
+     * @param \AG\AgProject\Domain\Model\Project $project
      * @return void
      */
     public function showAction(\AG\AgProject\Domain\Model\Project $project)
