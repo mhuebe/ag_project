@@ -32,5 +32,5 @@ namespace AG\AgProduct\Domain\Repository;
 class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 
-    
+
 }

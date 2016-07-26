@@ -1,7 +1,7 @@
 <?php
 namespace AG\AgProduct\Domain\Model;
 
-/***************************************************************
+/**
  *
  *  Copyright notice
  *
@@ -24,7 +24,7 @@ namespace AG\AgProduct\Domain\Model;
  *  GNU General Public License for more details.
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+ */
 
 /**
  * Category
@@ -32,88 +32,88 @@ namespace AG\AgProduct\Domain\Model;
 class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
-    /**
-     * title
-     *
-     * @var string
-     */
-    protected $title = '';
-    
-    /**
-     * description
-     *
-     * @var string
-     */
-    protected $description = '';
-    
-    /**
-     * images
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     */
-    protected $images = null;
-    
-    /**
-     * Returns the title
-     *
-     * @return string $title
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-    
-    /**
-     * Sets the title
-     *
-     * @param string $title
-     * @return void
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-    
-    /**
-     * Returns the description
-     *
-     * @return string $description
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-    
-    /**
-     * Sets the description
-     *
-     * @param string $description
-     * @return void
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-    
-    /**
-     * Returns the images
-     *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
-    
-    /**
-     * Sets the images
-     *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
-     * @return void
-     */
-    public function setImages(\TYPO3\CMS\Extbase\Domain\Model\FileReference $images)
-    {
-        $this->images = $images;
-    }
+	/**
+	 * title
+	 *
+	 * @var string
+	 */
+	protected $title = '';
+
+	/**
+	 * description
+	 *
+	 * @var string
+	 */
+	protected $description = '';
+
+	/**
+	 * images
+	 *
+	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+	 */
+	protected $images = null;
+
+	/**
+	 * Returns the title
+	 *
+	 * @return string $title
+	 */
+	public function getTitle()
+	{
+		return $this->title;
+	}
+
+	/**
+	 * Sets the title
+	 *
+	 * @param string $title
+	 * @return void
+	 */
+	public function setTitle($title)
+	{
+		$this->title = $title;
+	}
+
+	/**
+	 * Returns the description
+	 *
+	 * @return string $description
+	 */
+	public function getDescription()
+	{
+		return $this->description;
+	}
+
+	/**
+	 * Sets the description
+	 *
+	 * @param string $description
+	 * @return void
+	 */
+	public function setDescription($description)
+	{
+		$this->description = $description;
+	}
+
+	/**
+	 * Returns the images
+	 *
+	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
+	 */
+	public function getImages()
+	{
+		return $this->images;
+	}
+
+	/**
+	 * Sets the images
+	 *
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $images
+	 * @return void
+	 */
+	public function setImages(\TYPO3\CMS\Extbase\Domain\Model\FileReference $images)
+	{
+		$this->images = $images;
+	}
 
 }

@@ -1,7 +1,7 @@
 <?php
 namespace AG\AgProject\Controller;
 
-/***************************************************************
+/**
  *
  *  Copyright notice
  *
@@ -24,7 +24,7 @@ namespace AG\AgProject\Controller;
  *  GNU General Public License for more details.
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+ */
 
 /**
  * CategoryController
@@ -32,23 +32,23 @@ namespace AG\AgProject\Controller;
 class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
-    /**
-     * categoryRepository
-     *
-     * @var \AG\AgProduct\Domain\Repository\CategoryRepository
-     * @inject
-     */
-    protected $categoryRepository = NULL;
-    
-    /**
-     * action list
-     *
-     * @return void
-     */
-    public function listAction()
-    {
-        $categories = $this->categoryRepository->findAll();
-        $this->view->assign('categories', $categories);
-    }
+	/**
+	 * categoryRepository
+	 *
+	 * @var \AG\AgProduct\Domain\Repository\CategoryRepository
+	 * @inject
+	 */
+	protected $categoryRepository = NULL;
+
+	/**
+	 * action list
+	 *
+	 * @return void
+	 */
+	public function listAction()
+	{
+		$categories = $this->categoryRepository->findAll();
+		$this->view->assign('categories', $categories);
+	}
 
 }

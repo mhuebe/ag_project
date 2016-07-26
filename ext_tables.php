@@ -23,18 +23,18 @@ if (!defined('TYPO3_MODE')) {
 
 $extensionName = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY));
 $frontendpluginName = 'project';
-$pluginSignature = strtolower($extensionName) . '_'.strtolower($frontendpluginName); 
+$pluginSignature = strtolower($extensionName) . '_' . strtolower($frontendpluginName);
 
-$TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages'; 
+$TCA['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'layout,select_key,pages';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY . '/Configuration/FlexForms/flexform.xml');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform.xml');
 
 // add Sorting 
 $TCA['tx_agproject_domain_model_project']['ctrl']['sortby'] = 'sorting';
 $TCA['tx_agproject_domain_model_category']['ctrl']['sortby'] = 'sorting';
 
 // add wizard icon to the "add new record" in backend
-if (TYPO3_MODE == "BE") { 
-    $TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["AgProjectWizicon"] =
-         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Helper/AgProjectWizicon.php';
+if (TYPO3_MODE == "BE") {
+	$TBE_MODULES_EXT["xMOD_db_new_content_el"]["addElClasses"]["AgProjectWizicon"] =
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Classes/Helper/AgProjectWizicon.php';
 }

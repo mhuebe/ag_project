@@ -8,13 +8,12 @@ if (!defined('TYPO3_MODE')) {
 	'Project',
 	array(
 		'Project' => 'list, show',
-		'Category' => 'list',			
+		'Category' => 'list',
 	),
 	// non-cacheable actions
 	array(
 		'Category' => '',
 		'Project' => '',
-		
 	)
 );
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
@@ -24,13 +23,13 @@ if (!defined('TYPO3_MODE')) {
 	'Project',
 	array(
 		'Project' => 'list, show',
-		'Category' => 'list',				
+		'Category' => 'list',
 	),
 	// non-cacheable actions
 	array(
 		'Category' => '',
 		'Project' => '',
-		
+
 	)
 );
 

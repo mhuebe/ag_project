@@ -1,8 +1,8 @@
+
 <?php
 namespace AG\AgProject\Domain\Model;
 
-
-/***************************************************************
+/**
  *
  *  Copyright notice
  *
@@ -25,7 +25,7 @@ namespace AG\AgProject\Domain\Model;
  *  GNU General Public License for more details.
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
- ***************************************************************/
+ */
 
 /**
  * Status
@@ -33,60 +33,60 @@ namespace AG\AgProject\Domain\Model;
 class Status extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
 
-    /**
-     * name
-     *
-     * @var string
-     */
-    protected $name = '';
-    
-    /**
-     * imageStatus
-     *
-     * @var string
-     */
-    protected $imageStatus = '';
-    
-    /**
-     * Returns the name
-     *
-     * @return string $name
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * Sets the name
-     *
-     * @param string $name
-     * @return void
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-    
-    /**
-     * Returns the imageStatus
-     *
-     * @return string $imageStatus
-     */
-    public function getImageStatus()
-    {
-        return $this->imageStatus;
-    }
-    
-    /**
-     * Sets the imageStatus
-     *
-     * @param string $imageStatus
-     * @return void
-     */
-    public function setImageStatus($imageStatus)
-    {
-        $this->imageStatus = $imageStatus;
-    }
+	/**
+	 * name
+	 *
+	 * @var string
+	 */
+	protected $name = '';
+
+	/**
+	 * imageStatus
+	 *
+	 * @var string
+	 */
+	protected $imageStatus = '';
+
+	/**
+	 * Returns the name
+	 *
+	 * @return string $name
+	 */
+	public function getName()
+	{
+		return $this->name;
+	}
+
+	/**
+	 * Sets the name
+	 *
+	 * @param string $name
+	 * @return void
+	 */
+	public function setName($name)
+	{
+		$this->name = $name;
+	}
+
+	/**
+	 * Returns the imageStatus
+	 *
+	 * @return string $imageStatus
+	 */
+	public function getImageStatus()
+	{
+		return $this->imageStatus;
+	}
+
+	/**
+	 * Sets the imageStatus
+	 *
+	 * @param string $imageStatus
+	 * @return void
+	 */
+	public function setImageStatus($imageStatus)
+	{
+		$this->imageStatus = $imageStatus;
+	}
 
 }
