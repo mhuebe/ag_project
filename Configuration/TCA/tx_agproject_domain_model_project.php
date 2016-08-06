@@ -9,7 +9,6 @@ return array(
 		'dividers2tabs' => TRUE,
 		'versioningWS' => 2,
 		'versioning_followPages' => TRUE,
-
 		'languageField' => 'sys_language_uid',
 		'transOrigPointerField' => 'l10n_parent',
 		'transOrigDiffSourceField' => 'l10n_diffsource',
@@ -19,14 +18,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'title,description,images,client,website_url,category,status,related_projects,',
+		'searchFields' => 'title,description,images,client,website_url,category,tag,status,related_projects,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('ag_project') . 'Resources/Public/Icons/tx_agproject_domain_model_project.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, images, client, website_url, category, status, related_projects',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, images, client, website_url, category, tag, status, related_projects',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description;;;richtext:rte_transform[mode=ts_links], images, client, website_url, category, status, related_projects, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description;;;richtext:rte_transform[mode=ts_links], images, client, website_url, category, tag, status, related_projects, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -249,6 +248,47 @@ return array(
 						'icon' => 'add.gif',
 						'params' => array(
 							'table' => 'tx_agproject_domain_model_category',
+							'pid' => '###CURRENT_PID###',
+							'setValue' => 'prepend'
+						),
+					),
+				),
+			),
+		),
+		'tag' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:ag_project/Resources/Private/Language/locallang_db.xlf:tx_agproject_domain_model_project.tag',
+			'config' => array(
+				'type' => 'select',
+				'renderType' => 'selectMultipleSideBySide',
+				'foreign_table' => 'tx_agproject_domain_model_tag',
+				'MM' => 'tx_agproject_project_tag_mm',
+				'size' => 10,
+				'autoSizeMax' => 30,
+				'maxitems' => 9999,
+				'multiple' => 0,
+				'wizards' => array(
+					'_PADDING' => 1,
+					'_VERTICAL' => 1,
+					'edit' => array(
+						'module' => array(
+							'name' => 'wizard_edit',
+						),
+						'type' => 'popup',
+						'title' => 'Edit',
+						'icon' => 'edit2.gif',
+						'popup_onlyOpenIfSelected' => 1,
+						'JSopenParams' => 'height=350,width=580,status=0,menubar=0,scrollbars=1',
+						),
+					'add' => Array(
+						'module' => array(
+							'name' => 'wizard_add',
+						),
+						'type' => 'script',
+						'title' => 'Create new',
+						'icon' => 'add.gif',
+						'params' => array(
+							'table' => 'tx_agproject_domain_model_tag',
 							'pid' => '###CURRENT_PID###',
 							'setValue' => 'prepend'
 						),

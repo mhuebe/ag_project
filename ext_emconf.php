@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Project Managment',
-	'description' => 'Project managment with isotop or pagination option',
+	'description' => 'Project management with isotop or pagination option',
 	'category' => 'plugin',
 	'author' => 'Ajay Gohel',
 	'author_email' => 'ajaygohel30@gmail.com',
@@ -20,7 +20,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => true,
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '2.0.1',
+	'version' => '3.0.0',
 	'constraints' =>
 		array(
 			'depends' =>

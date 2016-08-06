@@ -16,7 +16,7 @@
 				<source>Images</source>
 			</trans-unit>
 			<trans-unit id="tx_agproject_domain_model_project">
-				<source>project</source>
+				<source>Project</source>
 			</trans-unit>
 			<trans-unit id="tx_agproject_domain_model_project.title">
 				<source>Title</source>
@@ -36,6 +36,9 @@
 			<trans-unit id="tx_agproject_domain_model_project.category">
 				<source>Category</source>
 			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_project.tag">
+				<source>Tag</source>
+			</trans-unit>
 			<trans-unit id="tx_agproject_domain_model_project.status">
 				<source>Status</source>
 			</trans-unit>
@@ -51,8 +54,11 @@
 			<trans-unit id="tx_agproject_domain_model_status.image_status">
 				<source>Image Status</source>
 			</trans-unit>
-			<trans-unit id="tx_agproject_domain_model_project.price">
-				<source>Price</source>
+			<trans-unit id="tx_agproject_domain_model_tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_tag.title">
+				<source>Title</source>
 			</trans-unit>
 		</body>
 	</file>

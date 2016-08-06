@@ -83,6 +83,14 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $category = NULL;
 
 	/**
+	 * tags
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Tag>
+	 * @cascade remove
+	 */
+	protected $tag = NULL;
+
+	/**
 	 * relatedProjects
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Project>
@@ -216,6 +224,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 		$this->category = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->relatedProjects = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 		$this->status = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->tag = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -345,6 +354,49 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setStatus(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $status)
 	{
 		$this->status = $status;
+	}
+
+	/**
+	 * Adds a Tag
+	 *
+	 * @param \AG\AgProject\Domain\Model\Tag $tag
+	 * @return void
+	 */
+	public function addTag(\AG\AgProject\Domain\Model\Tag $tag)
+	{
+		$this->tag->attach($tag);
+	}
+
+	/**
+	 * Removes a Tag
+	 *
+	 * @param \AG\AgProject\Domain\Model\Tag $tagToRemove The Tag to be removed
+	 * @return void
+	 */
+	public function removeTag(\AG\AgProject\Domain\Model\Tag $tagToRemove)
+	{
+		$this->tag->detach($tagToRemove);
+	}
+
+	/**
+	 * Returns the tag
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Tag> tag
+	 */
+	public function getTag()
+	{
+		return $this->tag;
+	}
+
+	/**
+	 * Sets the tag
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Tag> $tag
+	 * @return void
+	 */
+	public function setTag(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tag)
+	{
+		$this->tag = $tag;
 	}
 
 }

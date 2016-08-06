@@ -73,6 +73,12 @@
 			<trans-unit id="tx_agproduct_domain_model_category.images">
 				<target>Images</target>
 			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_agproject_domain_model_tag.title">
+				<source>Title</source>
+			</trans-unit>
 			<trans-unit id="tx_agproject_domain_model_project">
 				<target>Product</target>
 			</trans-unit>
