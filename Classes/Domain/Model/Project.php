@@ -31,34 +31,48 @@ namespace AG\AgProject\Domain\Model;
  */
 class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
-
 	/**
 	 * title
 	 *
 	 * @var string
 	 */
-	protected $title = '';
+	protected $title;
 
 	/**
 	 * description
 	 *
 	 * @var string
 	 */
-	protected $description = '';
+	protected $description;
+
+	/**
+	 * client
+	 *
+	 * @var string
+	 */
+	protected $client;
+
+	/**
+	 * websiteUrl
+	 *
+	 * @var string
+	 */
+	protected $websiteUrl;
 
 	/**
 	 * images
 	 *
-	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
 	 */
-	protected $images = '';
+	protected $images = NULL;
 
 	/**
-	 * price
+	 * status
 	 *
-	 * @var string
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Status>
+	 * @cascade remove
 	 */
-	protected $price = '';
+	protected $status = NULL;
 
 	/**
 	 * category
@@ -66,7 +80,14 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Category>
 	 * @cascade remove
 	 */
-	protected $category = null;
+	protected $category = NULL;
+
+	/**
+	 * relatedProjects
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Project>
+	 */
+	protected $relatedProjects = NULL;
 
 	/**
 	 * Returns the title
@@ -111,9 +132,51 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	}
 
 	/**
+	 * Returns the client
+	 *
+	 * @return string $client
+	 */
+	public function getClient()
+	{
+		return $this->client;
+	}
+
+	/**
+	 * Sets the client
+	 *
+	 * @param string $client
+	 * @return void
+	 */
+	public function setClient($client)
+	{
+		$this->client = $client;
+	}
+
+	/**
+	 * Returns the websiteUrl
+	 *
+	 * @return string $websiteUrl
+	 */
+	public function getWebsiteUrl()
+	{
+		return $this->websiteUrl;
+	}
+
+	/**
+	 * Sets the websiteUrl
+	 *
+	 * @param string $websiteUrl
+	 * @return void
+	 */
+	public function setWebsiteUrl($websiteUrl)
+	{
+		$this->websiteUrl = $websiteUrl;
+	}
+
+	/**
 	 * Returns the images
 	 *
-	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference images
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
 	 */
 	public function getImages()
 	{
@@ -123,33 +186,12 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Sets the images
 	 *
-	 * @param string $images
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
 	 * @return void
 	 */
 	public function setImages($images)
 	{
 		$this->images = $images;
-	}
-
-	/**
-	 * Returns the price
-	 *
-	 * @return string $price
-	 */
-	public function getPrice()
-	{
-		return $this->price;
-	}
-
-	/**
-	 * Sets the price
-	 *
-	 * @param string $price
-	 * @return void
-	 */
-	public function setPrice($price)
-	{
-		$this->price = $price;
 	}
 
 	/**
@@ -172,6 +214,8 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected function initStorageObjects()
 	{
 		$this->category = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->relatedProjects = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		$this->status = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
 	}
 
 	/**
@@ -215,6 +259,92 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setCategory(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $category)
 	{
 		$this->category = $category;
+	}
+
+	/**
+	 * Adds a RelatedProjects
+	 *
+	 * @param \AG\AgProject\Domain\Model\RelatedProjects $relatedProjects
+	 * @return void
+	 */
+	public function addRelatedProjects(\AG\AgProject\Domain\Model\RelatedProjects $relatedProjects)
+	{
+		$this->relatedProjects->attach($relatedProjects);
+	}
+
+	/**
+	 * Removes a RelatedProjects
+	 *
+	 * @param \AG\AgProject\Domain\Model\RelatedProjects $relatedProjectsToRemove The RelatedProjects to be removed
+	 * @return void
+	 */
+	public function removeRelatedProjects(\AG\AgProject\Domain\Model\RelatedProjects $relatedProjectsToRemove)
+	{
+		$this->relatedProjects->detach($relatedProjectsToRemove);
+	}
+
+	/**
+	 * Returns the relatedProjects
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\RelatedProjects> relatedProjects
+	 */
+	public function getRelatedProjects()
+	{
+		return $this->relatedProjects;
+	}
+
+	/**
+	 * Sets the relatedProjects
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\RelatedProjects> $relatedProjects
+	 * @return void
+	 */
+	public function setRelatedProjects(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $relatedProjects)
+	{
+		$this->relatedProjects = $relatedProjects;
+	}
+
+	/**
+	 * Adds a Status
+	 *
+	 * @param \AG\AgProject\Domain\Model\Status $status
+	 * @return void
+	 */
+	public function addStatus(\AG\AgProject\Domain\Model\Status $status)
+	{
+		$this->status->attach($status);
+	}
+
+	/**
+	 * Removes a Status
+	 *
+	 * @param \AG\AgProject\Domain\Model\Status $statusToRemove The Status to be removed
+	 * @return void
+	 */
+	public function removeStatus(\AG\AgProject\Domain\Model\Status $statusToRemove)
+	{
+		$this->status->detach($statusToRemove);
+	}
+
+	/**
+	 * Returns the status
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Status> status
+	 */
+	public function getStatus()
+	{
+		return $this->status;
+	}
+
+	/**
+	 * Sets the status
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Status> $status
+	 * @return void
+	 */
+	public function setStatus(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $status)
+	{
+		$this->status = $status;
 	}
 
 }

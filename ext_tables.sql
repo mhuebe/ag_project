@@ -55,7 +55,7 @@ CREATE TABLE tx_agproject_domain_model_project (
 	website_url varchar(255) DEFAULT '' NOT NULL,
 	category int(11) unsigned DEFAULT '0' NOT NULL,
 	status int(11) unsigned DEFAULT '0' NOT NULL,
-	realted_projects int(11) unsigned DEFAULT '0' NOT NULL,
+	related_projects int(11) unsigned DEFAULT '0' NOT NULL,
 
 	sorting int(10) DEFAULT '0' NOT NULL
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

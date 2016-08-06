@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'title,description,images,client,website_url,category,status,realted_projects,',
+		'searchFields' => 'title,description,images,client,website_url,category,status,related_projects,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('ag_project') . 'Resources/Public/Icons/tx_agproject_domain_model_project.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, images, client, website_url, category, status, realted_projects',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, images, client, website_url, category, status, related_projects',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description;;;richtext:rte_transform[mode=ts_links], images, client, website_url, category, status, realted_projects, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description;;;richtext:rte_transform[mode=ts_links], images, client, website_url, category, status, related_projects, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -297,9 +297,9 @@ return array(
 				),
 			),
 		),
-		'realted_projects' => array(
+		'related_projects' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:ag_project/Resources/Private/Language/locallang_db.xlf:tx_agproject_domain_model_project.realted_projects',
+			'label' => 'LLL:EXT:ag_project/Resources/Private/Language/locallang_db.xlf:tx_agproject_domain_model_project.related_projects',
 			'config' => array(
 				'type' => 'select',
 				'renderType' => 'selectMultipleSideBySide',

@@ -1,4 +1,3 @@
-
 <?php
 namespace AG\AgProject\Domain\Model;
 

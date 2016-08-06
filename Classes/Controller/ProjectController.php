@@ -95,7 +95,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	 */
 	public function showAction(\AG\AgProject\Domain\Model\Project $project)
 	{
-		$this->view->assign('product', $project);
+		$this->view->assign('project', $project);
 	}
 
 }

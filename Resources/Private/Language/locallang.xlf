@@ -49,8 +49,8 @@
 			<trans-unit id="tx_agproject_domain_model_project.status">
 				<source>Status</source>
 			</trans-unit>
-			<trans-unit id="tx_agproject_domain_model_project.realted_projects">
-				<source>Realted Projects</source>
+			<trans-unit id="tx_agproject_domain_model_project.related_projects">
+				<source>Related Projects</source>
 			</trans-unit>
 			<trans-unit id="tx_agproject_domain_model_status">
 				<source>Status</source>

@@ -24,8 +24,8 @@
 			<trans-unit id="status.description">
 				<source>status</source>
 			</trans-unit>
-			<trans-unit id="realted_projects.description">
-				<source>realtedProjects</source>
+			<trans-unit id="related_projects.description">
+				<source>relatedProjects</source>
 			</trans-unit>
 			<trans-unit id="price.description">
 				<source>price</source>
