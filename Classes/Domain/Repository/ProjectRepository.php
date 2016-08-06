@@ -1,4 +1,3 @@
-
 <?php
 namespace AG\AgProject\Domain\Repository;
 
@@ -290,10 +289,10 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 
 	/**
 	 * falImages
-	 *
+	 * 
 	 * @param $id
-	 * @param $additionalParams
-	 * @return
+	 * @param string $additionalParams
+	 * @return string
 	 */
 	public function getURL($id, $additionalParams = '')
 	{

@@ -23,7 +23,7 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
 
-namespace AG\AgProduct\Service;
+namespace AG\AgProject\Service;
 
 
 /**

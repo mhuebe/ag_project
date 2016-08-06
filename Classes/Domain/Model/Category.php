@@ -1,5 +1,5 @@
 <?php
-namespace AG\AgProduct\Domain\Model;
+namespace AG\AgProject\Domain\Model;
 
 /**
  *

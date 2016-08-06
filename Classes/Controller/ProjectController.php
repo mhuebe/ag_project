@@ -50,7 +50,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	{
 		$_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_GET();
 		$post = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
-		//$postVar = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
+
 		$settings = $this->settings;
 		$GLOBALS["TSFE"]->set_no_cache();
 		$modeOptions = $settings['modeOptions'];
@@ -59,11 +59,11 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 			$uriArr = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_porject_porject');
 			if (isset($_GP['categoryID'])) {
 				$GLOBALS['TSFE']->additionalFooterData['gridJavascript'] = '
-                <script>
-                jQuery(function(){
-                   jQuery("#cat_' . $_GP['categoryID'] . '").click();
-                });
-                </script>';
+				<script>
+				jQuery(function(){
+				   jQuery("#cat_' . $_GP['categoryID'] . '").click();
+				});
+				</script>';
 			}
 
 			$categoryListForGrid = $this->projectRepository->getProductsCategory($settings);

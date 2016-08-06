@@ -63,7 +63,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * category
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProduct\Domain\Model\Category>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Category>
 	 * @cascade remove
 	 */
 	protected $category = null;
@@ -177,10 +177,10 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Adds a Category
 	 *
-	 * @param \AG\AgProduct\Domain\Model\Category $category
+	 * @param \AG\AgProject\Domain\Model\Category $category
 	 * @return void
 	 */
-	public function addCategory(\AG\AgProduct\Domain\Model\Category $category)
+	public function addCategory(\AG\AgProject\Domain\Model\Category $category)
 	{
 		$this->category->attach($category);
 	}
@@ -188,10 +188,10 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Removes a Category
 	 *
-	 * @param \AG\AgProduct\Domain\Model\Category $categoryToRemove The Category to be removed
+	 * @param \AG\AgProject\Domain\Model\Category $categoryToRemove The Category to be removed
 	 * @return void
 	 */
-	public function removeCategory(\AG\AgProduct\Domain\Model\Category $categoryToRemove)
+	public function removeCategory(\AG\AgProject\Domain\Model\Category $categoryToRemove)
 	{
 		$this->category->detach($categoryToRemove);
 	}
@@ -199,7 +199,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Returns the category
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProduct\Domain\Model\Category> category
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Category> category
 	 */
 	public function getCategory()
 	{
@@ -209,7 +209,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * Sets the category
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProduct\Domain\Model\Category> $category
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Category> $category
 	 * @return void
 	 */
 	public function setCategory(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $category)

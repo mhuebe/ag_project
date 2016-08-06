@@ -1,6 +1,6 @@
 <?php
 
-namespace AG\AgProduct\Hooks;
+namespace AG\AgProject\Hooks;
 
 /**
  * This file is part of the TYPO3 CMS project.
