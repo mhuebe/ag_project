@@ -98,6 +98,13 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $relatedProjects = NULL;
 
 	/**
+	 * categoryList
+	 *
+	 * @var string
+	 */
+	protected $categoryList;
+
+	/**
 	 * Returns the title
 	 *
 	 * @return string $title
@@ -200,6 +207,35 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setImages($images)
 	{
 		$this->images = $images;
+	}
+
+	/**
+	 * Returns the categoryList
+	 *
+	 * @return string $categoryList
+	 */
+	public function getCategoryList()
+	{
+		$categories = $this->getCategory();
+		if ($categories) {
+			$tmpArray = array();
+			foreach ($categories as $category) {
+				$tmpArray[] = 'cat_' . $category->getUid();
+			}
+			$this->categoryList = implode(' ', $tmpArray);
+		}
+		return $this->categoryList;
+	}
+
+	/**
+	 * Sets the categoryList
+	 *
+	 * @param string $categoryList
+	 * @return void
+	 */
+	public function setCategoryList($categoryList)
+	{
+		$this->categoryList = $categoryList;
 	}
 
 	/**
