@@ -41,6 +41,14 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	protected $projectRepository = NULL;
 
 	/**
+	 * categoryRepository
+	 *
+	 * @var \AG\AgProject\Domain\Repository\CategoryRepository
+	 * @inject
+	 */
+	protected $categoryRepository = NULL;
+
+	/**
 	 * action list
 	 *
 	 * @param \AG\AgProject\Domain\Model\Project
@@ -48,43 +56,10 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	 */
 	public function listAction()
 	{
-		$_GP = \TYPO3\CMS\Core\Utility\GeneralUtility::_GET();
-		$post = \TYPO3\CMS\Core\Utility\GeneralUtility::_POST();
-
-		$settings = $this->settings;
-		$GLOBALS["TSFE"]->set_no_cache();
-		$modeOptions = $settings['modeOptions'];
-
-		if ($modeOptions == 'Project->list' || $modeOptions == 'Project->detail') {
-			$uriArr = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('tx_porject_porject');
-			if (isset($_GP['categoryID'])) {
-				$GLOBALS['TSFE']->additionalFooterData['gridJavascript'] = '
-				<script>
-				jQuery(function(){
-				   jQuery("#cat_' . $_GP['categoryID'] . '").click();
-				});
-				</script>';
-			}
-
-			$categoryListForGrid = $this->projectRepository->getProductsCategory($settings);
-			$project_list = $this->projectRepository->getProducts($settings, $_GP);
-			if (isset($_GP['projectID'])) {
-				$related_project = $this->projectRepository->relatedProject($settings, $_GP);
-			}
-		} elseif ($modeOptions == 'Category->list') {
-			$category_list = $this->projectRepository->getProductsCategory($settings);
-		}
-
-		$actionUrl = $this->uriBuilder->getRequest()->getRequestUri();
-
-		$this->view->assign('products-list', $project_list);
-		$this->view->assign('related_project', $related_project);
-		$this->view->assign('category-list', $category_list);
-		$this->view->assign('categoryListGrid', $categoryListForGrid);
-
-
-		$this->view->assign('gp', $_GP);
-		$this->view->assign('actionUrl', $actionUrl);
+		$categories = $this->categoryRepository->findAll();
+		$projects = $this->projectRepository->findAll();
+		$this->view->assign('projects', $projects);
+		$this->view->assign('categories', $categories);
 	}
 
 	/**
