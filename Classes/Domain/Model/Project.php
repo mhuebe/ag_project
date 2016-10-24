@@ -94,6 +94,7 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * relatedProjects
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\AG\AgProject\Domain\Model\Project>
+	 * @lazy
 	 */
 	protected $relatedProjects = NULL;
 
