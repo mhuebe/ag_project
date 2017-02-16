@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
-.tx-ag-project .product-listing { margin: 0 0 10px 0; }
+@import url(//fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+.tx-ag-project .product-listing { margin: 0 0 10px 0;  padding: 10px 16px; }
 .tx-ag-project .list-group-item-price { text-align: right; }
 .tx-ag-project .list-group-item-more { float: right; }
 .tx-ag-project .list-group-item { border: none; }
